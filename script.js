@@ -10,10 +10,9 @@ let weather = {
   },
   displayWeather: function(data) {
     const {name} = data;
-    const {icon, description} = data.weather[0];
     const {temp, humidity} = data.main;
     const {speed} = data.wind;
-    console.log(name,icon,description,temp,humidity,speed)
+    console.log(name,temp,humidity,speed)
     document.querySelector(".city").innerText = name;
     document.querySelector(".temp").innerText = "Temperatura: " + temp + "°C";
     document.querySelector(".humidity").innerText = "Wilgotność: " + humidity + "%";
